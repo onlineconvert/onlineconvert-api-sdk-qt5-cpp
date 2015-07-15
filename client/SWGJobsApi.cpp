@@ -16,7 +16,7 @@ SWGJobsApi::SWGJobsApi(QString host, QString basePath) {
 }
 
 void
-SWGJobsApi::jobsGet(QString* status, QString* token, QString* key, SWGNumber* page) {
+SWGJobsApi::jobsGet(QString* status, QString* xOcToken, QString* xOcApiKey, SWGNumber* page) {
     QString fullPath;
     fullPath.append(this->host).append(this->basePath).append("/jobs");
 
@@ -103,7 +103,7 @@ SWGJobsApi::jobsGetCallback(HttpRequestWorker * worker) {
     
 }
 void
-SWGJobsApi::jobsPost(QString* key, SWGJob body) {
+SWGJobsApi::jobsPost(QString* xOcApiKey, SWGJob body) {
     QString fullPath;
     fullPath.append(this->host).append(this->basePath).append("/jobs");
 
@@ -162,7 +162,7 @@ SWGJobsApi::jobsPostCallback(HttpRequestWorker * worker) {
     
 }
 void
-SWGJobsApi::jobsJobIdGet(QString* token, QString* key, QString* jobId) {
+SWGJobsApi::jobsJobIdGet(QString* xOcToken, QString* xOcApiKey, QString* jobId) {
     QString fullPath;
     fullPath.append(this->host).append(this->basePath).append("/jobs/{job_id}");
 
@@ -221,7 +221,7 @@ SWGJobsApi::jobsJobIdGetCallback(HttpRequestWorker * worker) {
     
 }
 void
-SWGJobsApi::jobsJobIdDelete(QString* token, QString* key, QString* jobId) {
+SWGJobsApi::jobsJobIdDelete(QString* xOcToken, QString* xOcApiKey, QString* jobId) {
     QString fullPath;
     fullPath.append(this->host).append(this->basePath).append("/jobs/{job_id}");
 
@@ -280,7 +280,7 @@ SWGJobsApi::jobsJobIdDeleteCallback(HttpRequestWorker * worker) {
     
 }
 void
-SWGJobsApi::jobsJobIdPatch(SWGJob body, QString* token, QString* key, QString* jobId) {
+SWGJobsApi::jobsJobIdPatch(SWGJob body, QString* xOcToken, QString* xOcApiKey, QString* jobId) {
     QString fullPath;
     fullPath.append(this->host).append(this->basePath).append("/jobs/{job_id}");
 
@@ -344,7 +344,7 @@ SWGJobsApi::jobsJobIdPatchCallback(HttpRequestWorker * worker) {
     
 }
 void
-SWGJobsApi::jobsJobIdThreadsGet(QString* token, QString* key, QString* jobId) {
+SWGJobsApi::jobsJobIdThreadsGet(QString* xOcToken, QString* xOcApiKey, QString* jobId) {
     QString fullPath;
     fullPath.append(this->host).append(this->basePath).append("/jobs/{job_id}/threads");
 

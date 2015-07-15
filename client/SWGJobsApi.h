@@ -3,10 +3,10 @@
 
 #include "SWGHttpRequest.h"
 
+#include "SWGError.h"
 #include <QString>
 #include "SWGNumber.h"
 #include "SWGJob.h"
-#include "SWGError.h"
 #include "SWGThread.h"
 
 #include <QObject>
@@ -24,12 +24,12 @@ public:
     QString host;
     QString basePath;
 
-    void jobsGet(QString* status, QString* token, QString* key, SWGNumber* page);
-    void jobsPost(QString* key, SWGJob body);
-    void jobsJobIdGet(QString* token, QString* key, QString* jobId);
-    void jobsJobIdDelete(QString* token, QString* key, QString* jobId);
-    void jobsJobIdPatch(SWGJob body, QString* token, QString* key, QString* jobId);
-    void jobsJobIdThreadsGet(QString* token, QString* key, QString* jobId);
+    void jobsGet(QString* status, QString* xOcToken, QString* xOcApiKey, SWGNumber* page);
+    void jobsPost(QString* xOcApiKey, SWGJob body);
+    void jobsJobIdGet(QString* xOcToken, QString* xOcApiKey, QString* jobId);
+    void jobsJobIdDelete(QString* xOcToken, QString* xOcApiKey, QString* jobId);
+    void jobsJobIdPatch(SWGJob body, QString* xOcToken, QString* xOcApiKey, QString* jobId);
+    void jobsJobIdThreadsGet(QString* xOcToken, QString* xOcApiKey, QString* jobId);
     
 private:
     void jobsGetCallback (HttpRequestWorker * worker);

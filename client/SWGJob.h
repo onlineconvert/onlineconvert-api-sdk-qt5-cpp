@@ -11,11 +11,11 @@
 
 
 #include "QDateTime.h"
-#include <QString>
-#include "SWGStatus.h"
 #include <QList>
-#include "SWGConversion.h"
+#include <QString>
 #include "SWGInputFile.h"
+#include "SWGConversion.h"
+#include "SWGStatus.h"
 
 #include "SWGObject.h"
 
@@ -45,8 +45,6 @@ public:
     void setStatus(SWGStatus* status);
     bool getProcess();
     void setProcess(bool process);
-    bool getTest();
-    void setTest(bool test);
     QList<SWGConversion*>* getConversion();
     void setConversion(QList<SWGConversion*>* conversion);
     QList<SWGInputFile*>* getInput();
@@ -67,7 +65,6 @@ private:
     QString* type;
     SWGStatus* status;
     bool process;
-    bool test;
     QList<SWGConversion*>* conversion;
     QList<SWGInputFile*>* input;
     QString* callback;

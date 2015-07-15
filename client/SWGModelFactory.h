@@ -8,7 +8,6 @@
 #include "SWGConversion.h"
 #include "SWGThread.h"
 #include "SWGStatus.h"
-#include "SWGLink.h"
 #include "SWGError.h"
 
 namespace Swagger {
@@ -30,9 +29,6 @@ namespace Swagger {
     }
     if(QString("SWGStatus").compare(type) == 0) {
       return new SWGStatus();
-    }
-    if(QString("SWGLink").compare(type) == 0) {
-      return new SWGLink();
     }
     if(QString("SWGError").compare(type) == 0) {
       return new SWGError();

@@ -16,7 +16,7 @@ SWGConversionApi::SWGConversionApi(QString host, QString basePath) {
 }
 
 void
-SWGConversionApi::jobsJobIdConversionsGet(QString* token, QString* key, QString* jobId) {
+SWGConversionApi::jobsJobIdConversionsGet(QString* xOcToken, QString* xOcApiKey, QString* jobId) {
     QString fullPath;
     fullPath.append(this->host).append(this->basePath).append("/jobs/{job_id}/conversions");
 
@@ -82,7 +82,7 @@ SWGConversionApi::jobsJobIdConversionsGetCallback(HttpRequestWorker * worker) {
     
 }
 void
-SWGConversionApi::jobsJobIdConversionsPost(SWGConversion body, QString* token, QString* key, QString* jobId) {
+SWGConversionApi::jobsJobIdConversionsPost(SWGConversion body, QString* xOcToken, QString* xOcApiKey, QString* jobId) {
     QString fullPath;
     fullPath.append(this->host).append(this->basePath).append("/jobs/{job_id}/conversions");
 
@@ -146,7 +146,7 @@ SWGConversionApi::jobsJobIdConversionsPostCallback(HttpRequestWorker * worker) {
     
 }
 void
-SWGConversionApi::jobsJobIdConversionsConversionIdGet(QString* token, QString* key, QString* jobId, QString* conversionId) {
+SWGConversionApi::jobsJobIdConversionsConversionIdGet(QString* xOcToken, QString* xOcApiKey, QString* jobId, QString* conversionId) {
     QString fullPath;
     fullPath.append(this->host).append(this->basePath).append("/jobs/{job_id}/conversions/{conversion_id}");
 
@@ -208,7 +208,7 @@ SWGConversionApi::jobsJobIdConversionsConversionIdGetCallback(HttpRequestWorker 
     
 }
 void
-SWGConversionApi::jobsJobIdConversionsConversionIdDelete(QString* token, QString* key, QString* jobId, QString* conversionId) {
+SWGConversionApi::jobsJobIdConversionsConversionIdDelete(QString* xOcToken, QString* xOcApiKey, QString* jobId, QString* conversionId) {
     QString fullPath;
     fullPath.append(this->host).append(this->basePath).append("/jobs/{job_id}/conversions/{conversion_id}");
 

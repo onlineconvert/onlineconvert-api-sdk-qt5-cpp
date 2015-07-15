@@ -16,7 +16,7 @@ SWGInputApi::SWGInputApi(QString host, QString basePath) {
 }
 
 void
-SWGInputApi::jobsJobIdInputGet(QString* token, QString* key, QString* jobId) {
+SWGInputApi::jobsJobIdInputGet(QString* xOcToken, QString* xOcApiKey, QString* jobId) {
     QString fullPath;
     fullPath.append(this->host).append(this->basePath).append("/jobs/{job_id}/input");
 
@@ -82,7 +82,7 @@ SWGInputApi::jobsJobIdInputGetCallback(HttpRequestWorker * worker) {
     
 }
 void
-SWGInputApi::jobsJobIdInputPost(SWGInputFile body, QString* token, QString* key, QString* jobId) {
+SWGInputApi::jobsJobIdInputPost(SWGInputFile body, QString* xOcToken, QString* xOcApiKey, QString* jobId) {
     QString fullPath;
     fullPath.append(this->host).append(this->basePath).append("/jobs/{job_id}/input");
 
@@ -146,7 +146,7 @@ SWGInputApi::jobsJobIdInputPostCallback(HttpRequestWorker * worker) {
     
 }
 void
-SWGInputApi::jobsJobIdInputFileIdGet(QString* token, QString* key, QString* jobId, QString* fileId) {
+SWGInputApi::jobsJobIdInputFileIdGet(QString* xOcToken, QString* xOcApiKey, QString* jobId, QString* fileId) {
     QString fullPath;
     fullPath.append(this->host).append(this->basePath).append("/jobs/{job_id}/input/{file_id}");
 
@@ -208,7 +208,7 @@ SWGInputApi::jobsJobIdInputFileIdGetCallback(HttpRequestWorker * worker) {
     
 }
 void
-SWGInputApi::jobsJobIdInputFileIdDelete(QString* token, QString* key, QString* jobId, QString* fileId) {
+SWGInputApi::jobsJobIdInputFileIdDelete(QString* xOcToken, QString* xOcApiKey, QString* jobId, QString* fileId) {
     QString fullPath;
     fullPath.append(this->host).append(this->basePath).append("/jobs/{job_id}/input/{file_id}");
 

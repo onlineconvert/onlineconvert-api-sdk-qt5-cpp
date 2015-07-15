@@ -3,9 +3,9 @@
 
 #include "SWGHttpRequest.h"
 
+#include "SWGError.h"
 #include <QString>
 #include "SWGConversion.h"
-#include "SWGError.h"
 
 #include <QObject>
 
@@ -22,10 +22,10 @@ public:
     QString host;
     QString basePath;
 
-    void jobsJobIdConversionsGet(QString* token, QString* key, QString* jobId);
-    void jobsJobIdConversionsPost(SWGConversion body, QString* token, QString* key, QString* jobId);
-    void jobsJobIdConversionsConversionIdGet(QString* token, QString* key, QString* jobId, QString* conversionId);
-    void jobsJobIdConversionsConversionIdDelete(QString* token, QString* key, QString* jobId, QString* conversionId);
+    void jobsJobIdConversionsGet(QString* xOcToken, QString* xOcApiKey, QString* jobId);
+    void jobsJobIdConversionsPost(SWGConversion body, QString* xOcToken, QString* xOcApiKey, QString* jobId);
+    void jobsJobIdConversionsConversionIdGet(QString* xOcToken, QString* xOcApiKey, QString* jobId, QString* conversionId);
+    void jobsJobIdConversionsConversionIdDelete(QString* xOcToken, QString* xOcApiKey, QString* jobId, QString* conversionId);
     
 private:
     void jobsJobIdConversionsGetCallback (HttpRequestWorker * worker);

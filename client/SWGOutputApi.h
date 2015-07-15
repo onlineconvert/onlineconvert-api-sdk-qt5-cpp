@@ -3,9 +3,9 @@
 
 #include "SWGHttpRequest.h"
 
+#include "SWGError.h"
 #include <QString>
 #include "SWGOutputFile.h"
-#include "SWGError.h"
 
 #include <QObject>
 
@@ -22,9 +22,9 @@ public:
     QString host;
     QString basePath;
 
-    void jobsJobIdOutputGet(QString* conversionId, QString* inputId, QString* token, QString* key, QString* jobId);
-    void jobsJobIdOutputFileIdGet(QString* token, QString* key, QString* jobId, QString* fileId);
-    void jobsJobIdOutputFileIdDelete(QString* token, QString* key, QString* jobId, QString* fileId);
+    void jobsJobIdOutputGet(QString* conversionId, QString* inputId, QString* xOcToken, QString* xOcApiKey, QString* jobId);
+    void jobsJobIdOutputFileIdGet(QString* xOcToken, QString* xOcApiKey, QString* jobId, QString* fileId);
+    void jobsJobIdOutputFileIdDelete(QString* xOcToken, QString* xOcApiKey, QString* jobId, QString* fileId);
     
 private:
     void jobsJobIdOutputGetCallback (HttpRequestWorker * worker);

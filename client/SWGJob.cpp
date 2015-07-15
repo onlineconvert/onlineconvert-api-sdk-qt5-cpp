@@ -31,7 +31,6 @@ SWGJob::init() {
     type = new QString("");
     status = new SWGStatus();
     process = false;
-    test = false;
     conversion = new QList<SWGConversion*>();
     input = new QList<SWGInputFile*>();
     callback = new QString("");
@@ -55,7 +54,6 @@ SWGJob::cleanup() {
     if(status != NULL) {
         delete status;
     }
-    
     
     if(conversion != NULL) {
         QList<SWGConversion*>* arr = conversion;
@@ -102,7 +100,6 @@ SWGJob::fromJsonObject(QJsonObject &pJson) {
     setValue(&type, pJson["type"], "QString", "QString");
     setValue(&status, pJson["status"], "SWGStatus", "SWGStatus");
     setValue(&process, pJson["process"], "bool", "");
-    setValue(&test, pJson["test"], "bool", "");
     setValue(&conversion, pJson["conversion"], "QList", "SWGConversion");
     setValue(&input, pJson["input"], "QList", "SWGInputFile");
     setValue(&callback, pJson["callback"], "QString", "QString");
@@ -150,7 +147,6 @@ SWGJob::asJsonObject() {
     
     
     obj->insert("process", QJsonValue(process));
-    obj->insert("test", QJsonValue(test));
     
     
     QList<SWGConversion*>* conversionList = conversion;
@@ -241,15 +237,6 @@ SWGJob::getProcess() {
 void
 SWGJob::setProcess(bool process) {
     this->process = process;
-}
-
-bool
-SWGJob::getTest() {
-    return test;
-}
-void
-SWGJob::setTest(bool test) {
-    this->test = test;
 }
 
 QList<SWGConversion*>*
