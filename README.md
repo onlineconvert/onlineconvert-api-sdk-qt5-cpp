@@ -1,3 +1,5 @@
+# This repository is deprecated and archived!
+
 # Online Convert API2 Qt5 SDK
 
 This SDK provides a code base to interact with the API2  version 2 for [Online Convert](http://www.online-convert.com/).
